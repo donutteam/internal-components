@@ -1,0 +1,26 @@
+{
+  "name": "@donutteam/internal-components",
+  "version": "1.0.0",
+  "description": "A collection of HTML-generating functions used internally by various Donut Team web services.",
+  "main": "./index.js",
+  "scripts": {
+    "lint": "eslint . -c ./.eslintrc.cjs",
+    "lint-fix": "eslint . -c ./.eslintrc.cjs --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donutteam/internal-components.git"
+  },
+  "keywords": [
+    "html"
+  ],
+  "author": "Donut Team",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@donutteam/document-builder": "^0.0.9"
+  },
+  "devDependencies": {
+    "@donutteam/eslint-config": "^1.0.5"
+  }
+}
