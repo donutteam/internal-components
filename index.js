@@ -2,7 +2,7 @@
 // Imports
 //
 
-// Nothing yet...
+import { Button } from "./components/Button.js";
 
 //
 // Exports
@@ -10,5 +10,5 @@
 
 export
 {
-	// Nothing yet...
+	Button,
 };

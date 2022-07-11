@@ -18,7 +18,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@donutteam/document-builder": "^0.0.9"
+    "@donutteam/document-builder": "^1.0.2"
   },
   "devDependencies": {
     "@donutteam/eslint-config": "^1.0.5"
