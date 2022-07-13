@@ -14,6 +14,7 @@ import { DE } from "@donutteam/document-builder";
 
 /**
  * @typedef {Object} ButtonOptions
+ * @property {String|Array<String>} [classes] Any additional class[es] for the button.
  * @property {String} [href] An href for the button. Optional.
  * @property {Boolean} [external] Whether or not the button links to an external site. This adds an extra icon to the button. Optional, defaults to false.
  * @property {String} [target] The target of a link button. Optional, defaults to "_blank" for external links and "_self" for non-external ones.
@@ -42,6 +43,11 @@ export function Button(options)
 		options = {};
 	}
 
+	if (options.classes == null)
+	{
+		options.classes = [];
+	}
+
 	if (options.external == null)
 	{
 		options.external = false;
@@ -60,6 +66,18 @@ export function Button(options)
 	if (options.iconType == null)
 	{
 		options.iconType = "font-awesome";
+	}
+
+	//
+	// Converting Option Types
+	//
+
+	if (options.classes != null)
+	{
+		if (!Array.isArray(options.classes))
+		{
+			options.classes = [ options.classes ];
+		}
 	}
 
 	//
@@ -94,6 +112,7 @@ export function Button(options)
 		{
 			class:
 			[
+				...options.classes,
 				"inline-block",
 				"p-2",
 				"rounded-xl",
