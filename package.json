@@ -17,8 +17,8 @@
   "author": "Donut Team",
   "license": "MIT",
   "type": "module",
-  "dependencies": {
-    "@donutteam/document-builder": "^1.0.2"
+  "peerDependencies": {
+    "@donutteam/document-builder": "1.x"
   },
   "devDependencies": {
     "@donutteam/eslint-config": "^1.0.5"
