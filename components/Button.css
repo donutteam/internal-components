@@ -9,7 +9,7 @@
 	--button__border-radius: 0.75em;
 	--button__text-color: #000000;
 
-	--button--hover__background-color: #cffafe; // Tailwind Cyan 100
+	--button--hover__background-color: #E2E8F0; // Tailwind Slate 200
 	--button--hover__text-color: #000000;
 }
 
@@ -22,6 +22,8 @@
 	border-radius: var(--button__border-radius);
 
 	color: var(--button__text-color);
+
+	cursor: pointer;
 
 	display: inline-block;
 
