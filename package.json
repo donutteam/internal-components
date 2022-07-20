@@ -1,6 +1,6 @@
 {
   "name": "@donutteam/internal-components",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A collection of HTML-generating functions used internally by various Donut Team web services.",
   "main": "./index.js",
   "scripts": {
