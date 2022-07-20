@@ -2,22 +2,33 @@
 // Buttons
 //
 
+:root
+{
+	--button__background-color: #CBD5E1; // Tailwind Slate 300
+	--button__border: 1px solid #94A3B8; // Tailwind Slate 400
+	--button__border-radius: 0.75em;
+	--button__text-color: #000000;
+
+	--button--hover__background-color: #cffafe; // Tailwind Cyan 100
+	--button--hover__text-color: #000000;
+}
+
 .button
 {
-	// Default: Tailwind Slate 300
-	background-color: var(--button-color, #CBD5E1);
+	background-color: var(--button__background-color); 
+	
+	border: var(--button__border);
 
-	// Default: Tailwind Slate 400
-	border: var(--button-border, 1px solid #94A3B8);
+	border-radius: var(--button__border-radius);
 
-	border-radius: var(--button-border-radius, 0.75rem);
+	color: var(--button__text-color);
 
 	display: inline-block;
 
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 
-	padding: var(--button-padding, 0.5rem);
+	padding: var(--button__padding, 0.5rem);
 
 	&:first-child
 	{
@@ -31,8 +42,9 @@
 
 	&:hover
 	{
-		// Default: Tailwind Cyan 100
-		background-color: var(--button-hover-color, #CFFAFE);
+		background-color: var(--button--hover__background-color);
+
+		color: var(--button--hover__text-color);
 	}
 }
 
