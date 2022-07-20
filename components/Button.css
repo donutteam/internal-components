@@ -7,6 +7,7 @@
 	--button__background-color: #CBD5E1; // Tailwind Slate 300
 	--button__border: 1px solid #94A3B8; // Tailwind Slate 400
 	--button__border-radius: 0.75em;
+	--button__padding: 0.5em;
 	--button__text-color: #000000;
 
 	--button--hover__background-color: #E2E8F0; // Tailwind Slate 200
@@ -30,7 +31,7 @@
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 
-	padding: var(--button__padding, 0.5rem);
+	padding: var(--button__padding);
 
 	&:first-child
 	{
