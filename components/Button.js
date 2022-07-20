@@ -32,8 +32,6 @@ import { DE } from "@donutteam/document-builder";
  */
 export function Button(options)
 {
-	// TODO: I haven't decided if this component should be responsible for HTML entitizing things or if the service using it should be
-
 	//
 	// Default Options
 	//
@@ -92,14 +90,14 @@ export function Button(options)
 		{
 			case "font-awesome":
 			default:
-				icon = new DE("span", `fa-fw ${ options.iconName } tw-mr-2`);
+				icon = new DE("span", `button__icon button__icon--${ options.iconPosition } ${ options.iconName }`);
 
 				break;
 
 			case "image":
 				icon = new DE("img",
 					{
-						class: "fa-fw tw-mr-2", // Kind of a HACK
+						class: "button__icon",
 						src: options.iconName,
 						alt: "Button Icon",
 					});
@@ -112,21 +110,16 @@ export function Button(options)
 		{
 			class:
 			[
+				"button",
 				...options.classes,
-				"tw-inline-block",
-				"tw-p-2",
-				"tw-rounded-xl",
-				"tw-bg-primary",
-				"tw-hover:tw-bg-secondary",
-				"tw-text-white",
 			],
 			href: options.href,
 			target: options.href != null ? options.target : null,
 		},
 		[
 			options.iconPosition == "before" ? icon : null,
-			options.text != null ? new DE("span", null, options.text) : null,
+			options.text != null ? new DE("span", "button__text", options.text) : null,
 			options.iconPosition == "after" ? icon : null,
-			options.external ? new DE("span", "fa-fw fa-thin fa-arrow-up-right-from-square tw-ml-2") : null,
+			options.external ? new DE("span", "button__external-icon fa-thin fa-arrow-up-right-from-square") : null,
 		]);
 }

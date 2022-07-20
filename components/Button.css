@@ -1,0 +1,90 @@
+//
+// Buttons
+//
+
+.button
+{
+	// Default: Tailwind Slate 300
+	background-color: var(--button-color, #CBD5E1);
+
+	// Default: Tailwind Slate 400
+	border: var(--button-border, 1px solid #94A3B8);
+
+	border-radius: var(--button-border-radius, 0.75rem);
+
+	display: inline-block;
+
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+
+	padding: var(--button-padding, 0.5rem);
+
+	&:first-child
+	{
+		margin-top: 0px;
+	}
+
+	&:last-child
+	{
+		margin-bottom: 0px;
+	}
+
+	&:hover
+	{
+		// Default: Tailwind Cyan 100
+		background-color: var(--button-hover-color, #CFFAFE);
+	}
+}
+
+.button__icon
+{
+	text-align: center;
+
+	width: 1.25em;
+}
+
+.button__icon--before
+{
+	margin-right: 0.5em;
+}
+
+.button__icon--after
+{
+	margin-left: 0.5em;
+}
+
+.button__external-icon
+{
+	margin-left: 0.5em;
+
+	text-align: center;
+
+	width: 1.25em;
+}
+
+//
+// Button Groups
+//
+
+.button-group
+{
+	display: flex;
+
+	flex-wrap: wrap;
+
+	gap: 0.5rem;
+
+	.button
+	{
+		margin: 0px;
+	}
+}
+
+//
+// Button Lists
+//
+
+.button-list
+{
+
+}
